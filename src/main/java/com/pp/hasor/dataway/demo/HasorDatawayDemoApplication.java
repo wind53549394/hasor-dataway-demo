@@ -8,6 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
+
+/**
+ * Hasor-Dataway Demo启动主类
+ *
+ * @author Kevin
+ */
 @EnableHasor()
 @EnableHasorWeb()
 @SpringBootApplication
@@ -18,7 +24,7 @@ public class HasorDatawayDemoApplication {
     }
 
     @Bean
-    public FilterRegistrationBean runtimeFilterRegistration(){
+    public FilterRegistrationBean runtimeFilterRegistration() {
         FilterRegistrationBean registration = new FilterRegistrationBean(new RuntimeFilter());
         registration.addUrlPatterns("/*");
         registration.addInitParameter("paramName", "paramValue");

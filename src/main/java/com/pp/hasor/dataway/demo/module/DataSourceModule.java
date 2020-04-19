@@ -11,10 +11,15 @@ import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 
+/**
+ * 配置基于Spring的数据源模块
+ *
+ * @author Kevin
+ */
 @Slf4j
 @DimModule
 @Component
-public class ExampleModule implements SpringModule {
+public class DataSourceModule implements SpringModule {
 
     @Autowired
     private DataSource dataSource;

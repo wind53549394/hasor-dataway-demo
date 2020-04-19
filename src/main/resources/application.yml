@@ -3,19 +3,10 @@ spring:
     url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&serverTimezone=CTT
     username: root
     password: root890624
-    type: com.alibaba.druid.pool.DruidDataSource
-    druid:
-      initial-size: 3
-      min-idle: 3
-      max-active: 10
-      max-wait: 60000
-      stat-view-servlet:
-        login-username: admin
-        login-password: admin
-      filter:
-        stat:
-          log-slow-sql: true
-          slow-sql-millis: 1
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 150
+      minimum-idle: 20
   freemarker:
     cache: false
     charset: utf-8
