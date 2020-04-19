@@ -16,6 +16,13 @@ spring:
         stat:
           log-slow-sql: true
           slow-sql-millis: 1
+  freemarker:
+    cache: false
+    charset: utf-8
+    content-type: text/html
+    #    prefix: /templates
+    suffix: .html
+    template-loader-path: classpath:templates
 
 # 是否启用 Dataway 功能（必选：默认false）
 HASOR_DATAQL_DATAWAY: true
