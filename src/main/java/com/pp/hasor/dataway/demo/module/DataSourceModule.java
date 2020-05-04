@@ -24,6 +24,12 @@ public class DataSourceModule implements SpringModule {
     @Autowired
     private DataSource dataSource;
 
+    /**
+     * 配置数据源模块到Hasor
+     *
+     * @param apiBinder
+     * @throws Throwable
+     */
     @Override
     public void loadModule(ApiBinder apiBinder) throws Throwable {
         // DataSource from Spring boot into Hasor

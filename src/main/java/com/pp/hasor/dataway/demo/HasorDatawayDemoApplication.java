@@ -14,8 +14,8 @@ import org.springframework.context.annotation.Bean;
  *
  * @author Kevin
  */
-@EnableHasor()
-@EnableHasorWeb()
+@EnableHasor
+@EnableHasorWeb
 @SpringBootApplication
 public class HasorDatawayDemoApplication {
 
@@ -23,14 +23,18 @@ public class HasorDatawayDemoApplication {
         SpringApplication.run(HasorDatawayDemoApplication.class, args);
     }
 
-    @Bean
-    public FilterRegistrationBean runtimeFilterRegistration() {
-        FilterRegistrationBean registration = new FilterRegistrationBean(new RuntimeFilter());
-        registration.addUrlPatterns("/*");
-        registration.addInitParameter("paramName", "paramValue");
-        registration.setName("runtimeFilter");
-        registration.setOrder(1);
-        return registration;
-
-    }
+    /**
+     * 配置RuntimeFilter
+     *
+     * @return FilterRegistrationBean
+     */
+//    @Bean
+//    public FilterRegistrationBean runtimeFilterRegistration() {
+//        FilterRegistrationBean registration = new FilterRegistrationBean(new RuntimeFilter());
+//        registration.addUrlPatterns("/*");
+//        registration.addInitParameter("paramName", "paramValue");
+//        registration.setName("runtimeFilter");
+//        registration.setOrder(1);
+//        return registration;
+//    }
 }
